@@ -20,4 +20,4 @@ app.get('/seatmap/:key', (req, res) => {
     })
 })
 
-app.listen(1337, () => console.log(`Example app listening on port ${1337}!`))
+app.listen(process.env.PORT || 1337, () => console.log(`Example app listening on port ${1337}!`))
