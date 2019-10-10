@@ -9,7 +9,7 @@ client.on('connect', ()=>{
     console.log( 'Redis Client connected' );
 })
 
-client.on('error', ()=>{
+client.on('error', (err)=>{
     console.log( 'Something went wrong ' + err );
 })
 
