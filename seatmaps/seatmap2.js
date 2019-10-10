@@ -1,4 +1,5 @@
-module.exports={"CabinSeatMap": {
+module.exports={
+	"CabinSeatMap": {
 					"CabinFlightDeck": {
 						"DeckDescription": "Main",
 						"DeckRange": {

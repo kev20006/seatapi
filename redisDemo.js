@@ -1,6 +1,8 @@
 
 const  seatmap1 = require('./seatmaps/seatmap')
 const  seatmap2 = require('./seatmaps/seatmap2')
+const  seatmap3 = require('./seatmaps/seatmap3')
+const  seatmap4 = require('./seatmaps/seatmap4')
 
 const getRedisConnect= () =>{
     if (process.env.REDISTOGO_URL) {
