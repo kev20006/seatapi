@@ -5,7 +5,8 @@ const getRedisConnect= () =>{
     if (process.env.REDISTOGO_URL) {
         const rtg   = require("url").parse(process.env.REDISTOGO_URL);
         const redis = require("redis").createClient(rtg.port, rtg.hostname);
-        return redis.auth(rtg.auth.split(":")[1]);
+        redis.auth(rtg.auth.split(":")[1]);
+        return redis
     } else {
         const redis = require('redis');
         return redis.createClient();
