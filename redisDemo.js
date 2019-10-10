@@ -1,9 +1,18 @@
-const redis = require('redis');
-const client = redis.createClient();
+
 const  seatmap1 = require('./seatmaps/seatmap')
 
+const getRedisConnect= () =>{
+    if (process.env.REDISTOGO_URL) {
+        const rtg   = require("url").parse(process.env.REDISTOGO_URL);
+        const redis = require("redis").createClient(rtg.port, rtg.hostname);
+        return redis.auth(rtg.auth.split(":")[1]);
+    } else {
+        const redis = require('redis');
+        return redis.createClient();
+    }
+}
 
-
+const client = getRedisConnect()
 
 client.on('connect', ()=>{
     console.log( 'Redis Client connected' );
