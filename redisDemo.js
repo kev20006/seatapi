@@ -1,5 +1,6 @@
 
 const  seatmap1 = require('./seatmaps/seatmap')
+const  seatmap2 = require('./seatmaps/seatmap2')
 
 const getRedisConnect= () =>{
     if (process.env.REDISTOGO_URL) {
@@ -27,6 +28,9 @@ module.exports ={
 
     redisInit: () => {
         client.set("seatmap1", JSON.stringify(seatmap1))
+        client.set("LHRJNB", JSON.stringify(seatmap2))
+        client.set("JFKLHR", JSON.stringify(seatmap3))
+        client.set("DXBHCM", JSON.stringify(seatmap4))
     },
 
     setValue: (key, value) => {
