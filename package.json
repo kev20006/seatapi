@@ -1,0 +1,25 @@
+{
+  "name": "seatapi",
+  "version": "1.0.0",
+  "description": "api to manage a redis seatstore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kev20006/seatapi.git"
+  },
+  "author": "kevin stewart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kev20006/seatapi/issues"
+  },
+  "homepage": "https://github.com/kev20006/seatapi#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.3",
+    "redis": "^2.8.0"
+  }
+}
