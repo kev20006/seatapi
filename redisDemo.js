@@ -35,17 +35,18 @@ module.exports ={
         client.set("DXBHCM", JSON.stringify(seatmap4))
     },
 
-    setValue: (key, value) => {
-        client.set(key, value, redis.print)
+    setValue: (key, value, onSet) => {
+        client.set(key, JSON.stringify(value), client.print);
+        onSet();
     },
 
-    getValue: (key, onResult) =>{
-        client.get(key, (error, result)=> {
+    getValue: (key, onResult) => {
+        client.get(key, (error, result) => {
             if (error) {
                 console.log(error);
                 throw error;
             }
-            onResult(key, result)
+            onResult(result)
         });
     },
 
